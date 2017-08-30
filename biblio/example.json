@@ -1,0 +1,13 @@
+
+{"paper":[
+    {"title"       : "Title of the presentation",
+     "day"         : "Day in which you will give the presentation (integer number)",
+     "month"       : "Month in which you will give the presentation (integer number)",
+     "author"      : "Your name",
+     "authorpage"  : "Link to your webpage or similar resource",
+     "abstract"    : "Abstract of your presentation",
+     "slides"      : "Link to the slides or any additional material that you want to provide",
+     "keywords"    : "Keywords for your presentation [between 1 and 4 keywords]"
+   }
+  ]
+}

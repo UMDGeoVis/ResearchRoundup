@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+
+<script type="text/javascript" src="./scripts/jquery.js"></script>
+<script src="./scripts/publScript.js"></script>
+
+<title>Research Roundup</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="./1.css" type="text/css" media="screen,projection" />
+</head>
+<body>
+<div id="container">
+  <div id="header">
+    <h1><a href="#">Research Roundup</a></h1>
+
+  </div>
+
+  <br class="clear" />
+  <div id="sidebar">
+    <img src="./logo2-geovis.jpg" width="150px"></img><br><br>
+    <h1>When and Where</h1>
+
+    <p>Every Monday from 1pm to 2pm</br>
+    <p>University of Maryland -
+       Center for Geospatial Information Science</br>
+       LeFrak Hall Bldg (Room 1124)</br>
+    </p>
+
+
+    <h1>Search</h1>
+    <div class="search">
+        <input type="search" placeholder="search here" required>
+    </div>
+    <br>
+
+    <h1>Year</h1>
+    <a onclick="location.reload()" href="#">All</a><br>
+    <a onclick="exclusive(2017,2017)" href="#">2017</a><br>
+
+    <br><br><br><br>
+    Powered by <a href="https://github.com/Haroenv/holmes">[Holmes]</a>
+
+  </div>
+
+
+  <div id="content">
+
+    <script>
+      publicationsYear(2017,2017)
+    </script>
+    <div class="results" id="publs"></div>
+
+
+    <script src="./scripts/holmes.js"></script>
+    <script src="./scripts/microlight.js"></script>
+    <script>
+    // holmes setup
+    var h = holmes({
+    input: '.search input',
+    find: '.results blockquote',
+    // placeholder: '<h3>— No results, my dear Watson. —</h3>',
+    mark: true,
+    hiddenAttr: true,
+    dynamic: true,
+    class: {
+      visible: 'visible',
+      hidden: 'hidden'
+    },
+    onHidden(el) {
+      console.log('hidden', el);
+    },
+    onFound(el) {
+      console.log('found', el);
+    },
+    onInput(el) {
+      console.log('input', el);
+    },
+    onVisible(el) {
+      console.log('visible', el);
+    },
+    onEmpty(el) {
+      console.log('empty', el);
+    }
+    });
+
+
+    // Toggle clicked class
+    var actions = document.querySelectorAll('[data-tooltip]');
+
+    for (var i = 0; i < actions.length; i++ ) {
+    actions[i].addEventListener('click', function() {
+      if (this.classList.contains('clicked')) {
+        this.classList.remove('clicked')
+      } else {
+        this.classList.add('clicked')
+      }
+    })
+    }
+
+    // toggle for showing hidden elements
+    document.querySelector('.visible').addEventListener('click', function(e) {
+    document.querySelector('.results').classList.toggle('classes');
+    });
+
+    document.querySelector('.mark').addEventListener('click',function(){
+    h.stop().then(function(){
+      h.options.mark = !h.options.mark;
+      h.start();
+      // hack to make it run at button click
+      h.input.dispatchEvent(new Event('input'));
+    })
+    });
+    </script>
+
+  </div>
+</body>
+</html>

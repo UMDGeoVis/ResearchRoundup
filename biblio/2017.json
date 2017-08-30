@@ -1,0 +1,22 @@
+
+{"papers":[
+      {"title"       : "Introduction to Topological Data Analysis",
+       "day"         : "11",
+       "month"       : "9",
+       "author"      : "Federico Iuricich",
+       "authorpage"  : "https://iuricichf.github.io/my_site/",
+       "abstract"    : "Topological Data Analysis (TDA) can be seen as a set of methods that use, as its model of data, only a notion of similarity between data points. Its primary advantage is the generality since any notion of similarity is enough to use the methodology. For the same reason algorithms derived from TDA tend to be very forgiving of small errors and has been revealed to be extremely effective for dealing with noise. At the same time its generality makes TDA a quite challenging topic, especially for those who do not have a strong background in topology. In this talk I will provide an intuitive introduction to TDA, also mentioning few of its many applications.",
+       "slides"      : "",
+       "keywords"    : "TDA, homology, networks, points clouds"
+     },
+      {"title"      : "Comparing Clustering Algorithms for Graphs",
+       "day"         : "7",
+       "month"       : "9",
+       "author"      : "Olivia Pomerenk",
+       "authorpage"  : "",
+       "abstract"    : "We are considering a new data structure for encoding a network based only on its k- cliques and vertices to provide greater efficiency in extracting substructures from a graph (a process which is generally computationally intensive, especially with large networks). The purpose of this summer’s research is to compare various graph clustering algorithms to find the best candidate to be a basis for this new data structure. The ideal algorithm has to work solely based on the community structure of the graph, without any extraneous vertex or edge attributes. The project relies heavily on preexisting literature and algorithms—specifically, algorithms written in the R iGraph library. The algorithms are tested on publicly available networks of increasing size (from hundreds to millions of nodes) and compared based on their space and time complexity, scalability, requisite parameters, homogeneity of the clustering they produce, and the number of edges within and without a cluster. The anticipated outcome of this research is the selection of one algorithm which will provide an ideal decomposition for new data structure.",
+       "slides"      : "",
+       "keywords"    : "R, graphs, clustering"
+    }
+  ]
+}
