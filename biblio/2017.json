@@ -5,7 +5,7 @@
        "month"       : "9",
        "author"      : "Federico Iuricich",
        "authorpage"  : "https://iuricichf.github.io/my_site/",
-       "abstract"    : "Topological Data Analysis (TDA) can be seen as a set of methods that use, as its model of data, only a notion of similarity between data points. Its primary advantage is the generality since any notion of similarity is enough to use the methodology. For the same reason algorithms derived from TDA tend to be very forgiving of small errors and has been revealed to be extremely effective for dealing with noise. At the same time its generality makes TDA a quite challenging topic, especially for those who do not have a strong background in topology. In this talk I will provide an intuitive introduction to TDA, also mentioning few of its many applications.",
+       "abstract"    : "Topological Data Analysis (TDA) can be seen as a set of methods that use, as its model of data, only a notion of similarity between data points. Its primary advantage is the generality since any notion of similarity is enough to use the methodology. For the same reason algorithms derived from TDA tend to be very forgiving of small errors and has been revealed to be extremely effective for dealing with noise. At the same time its generality makes TDA a quite challenging topic, especially for those who do not have a strong background in topology. In this talk I will provide an intuitive introduction to TDA, also mentioning applications.",
        "slides"      : "",
        "keywords"    : "TDA, homology, networks, point clouds"
      },
