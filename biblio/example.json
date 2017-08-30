@@ -1,5 +1,5 @@
 
-{"paper":[
+
     {"title"       : "Title of the presentation",
      "day"         : "Day in which you will give the presentation (integer number)",
      "month"       : "Month in which you will give the presentation (integer number)",
@@ -9,5 +9,3 @@
      "slides"      : "Link to the slides or any additional material that you want to provide",
      "keywords"    : "Keywords for your presentation [between 1 and 4 keywords]"
    }
-  ]
-}
