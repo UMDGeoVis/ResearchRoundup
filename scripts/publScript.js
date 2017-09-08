@@ -17,8 +17,11 @@ function publicationsYear(yearC,yearE){
 
   $.getJSON(path, function(json) {
 
-    var stringPaper = "<div id=year><h4>"+yearC+"</h4> <hr>";
-    // var stringPaper = "";
+    var fullString = "<div id=year><h3>"+yearC+"</h3> <hr>";
+    var nextTalk=""
+    var pastTalks = "<br><br><h4>Past Presentations</h4><hr>";
+    var futureTalks = ""
+    var found=false;
     for(var paper in json.papers){
 
       var title = json.papers[paper].title;
@@ -33,33 +36,50 @@ function publicationsYear(yearC,yearE){
       var dd = today.getDate();
       var mm = today.getMonth()+1;
       var yy = today.getYear()+1900;
-      console.log(yy,yearC)
-      if(mm > month && dd > day && yearC == yy)
-        stringPaper = stringPaper+"<br><br><h4>Past Presentations</h4><hr>"
 
-      if(mm == month && dd == day && yearC == yy)
-        stringPaper = stringPaper+"<blockquote><div id=paper><h3><font color=#ff8c00>[TODAY] <font color='black'>"+title+"</h4><br>";
-      else
-        stringPaper = stringPaper+"<blockquote><div id=paper><font color='black'><h3>"+title+"</h4><br>";
-
-      stringPaper = stringPaper+"Speaker - <a href='"+authorpage+"'>"+author+"</a><br>";
-      stringPaper = stringPaper+"Date - "+month+"/"+day+"<br>";
-      stringPaper = stringPaper+"Keywords: "+keywords+"<br>"
-      stringPaper = stringPaper+"<br>"+abstract;
-
+      var stringPaper = "<blockquote><div id=paper><font color='black'><h3>"+title+"</h4><br>"+
+                        "Speaker - <a href='"+authorpage+"'>"+author+"</a><br>"+
+                        "Date - "+month+"/"+day+"<br>"+
+                        "Keywords: "+keywords+"<br>"+
+                        "<br>"+abstract;
 
       var slides = json.papers[paper].slides;
       if(slides){
         stringPaper = stringPaper+"[<a href="+slides+">slides</a>]";
       }
-
       stringPaper = stringPaper+"</div></blockquote>";
 
+      if(nextTalk==""){
+        nextTalk=stringPaper;
+        continue;
+      }
+
+      // here we prepare the string for past and future talks
+      if((mm > month || dd > day) && yearC == yy){
+        //the presentation is passed
+        if(!found){
+          //this is the first past presentation that I've found
+          fullString=fullString+"Next presentation"+nextTalk+"</br></br>";
+          found=true;
+        }
+        else{
+          pastTalks=pastTalks+nextTalk;
+        }
+      }
+      else{
+        //the presentation is in the future
+        futureTalks=nextTalk+futureTalks
+
+      }
+
+      nextTalk=stringPaper;
     }
 
-    stringPaper=stringPaper+"</div>"
+    pastTalks=pastTalks+nextTalk;
 
-    $("#publs").append(stringPaper);
+    fullString=fullString+"<br><br><h4>Future Presentations</h4><hr>"+futureTalks+pastTalks+"</div>"
+
+    $("#publs").append(fullString);
 
     yearC = yearC-1;
     if(yearC >= yearE){
