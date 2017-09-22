@@ -1,5 +1,14 @@
 
 {"papers":[
+      {"title"     : "Introduction to the Treemapping project",
+     "day"         : "25",
+     "month"       : "9",
+     "author"      : "Xin Xu",
+     "authorpage"  : "https://geog.umd.edu/gradprofile/Xu/Xin%20",
+     "abstract"    : "In this talk, I will introduce our progress on the Treemapping project. The aim of the Treemapping project is to derive individual tree information from a point cloud acquired from the Airborne LIDAR (Light Detection and Ranging). Extracting individual tree information and understanding how forest structures evolve is crucial for studies of ecology, biology, etc. The existing methods present severe limitations in identifying under-story trees and overlapping trees in the various types of forests. Here, we describe the idea at the base of our two novel approaches based on topological and geometrical tools.",
+     "slides"      : "",
+     "keywords"    : "LIDAR, point cloud, topology"
+    },
       {"title"       : "Analysis of geolocalized social networks based on simplicial complexes",
        "day"         : "18",
        "month"       : "9",
