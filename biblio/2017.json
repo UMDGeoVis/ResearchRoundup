@@ -1,5 +1,14 @@
 
 {"papers":[
+      {"title"     : "Anlyzing multivariate data based on a discrete gradient field",
+     "day"         : "11",
+     "month"       : "10",
+     "author"      : "Federico Iuricich",
+     "authorpage"  : "https://iuricichf.github.io/my_site/0",
+     "abstract"    : "Multivariate data are becoming more and more popular in several applications, including physics, chemistry, medicine, geography, etc. A multivariate dataset is represented by a cell complex and a vector-valued function defined on the complex vertices. The major challenge arising when dealing with multivariate data is to obtain concise and effective visualizations. The usability of common visual elements (e.g., color, shape, size) deteriorates when the number of variables increases. We propose a new algorithm, well suited for parallel and distributed implementations, for computing a discrete gradient field. The latter is used as the basis of a visualization tool for capturing the mutual relationships among the different functions of the dataset.",
+     "slides"      : "",
+     "keywords"    : "Multivariate data, Discrete Morse theory, visualization"
+    },
       {"title"     : "Introduction to the Treemapping project",
      "day"         : "4",
      "month"       : "10",
