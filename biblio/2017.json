@@ -1,5 +1,23 @@
 
 {"papers":[
+        {"title"     : "GeoVis @ ACM SIGSPATIAL 2017",
+       "day"         : "8",
+       "month"       : "11",
+       "author"      : "GIS events",
+       "authorpage"  : "http://sigspatial2017.sigspatial.org",
+       "abstract"    : "Members of the GeoVis group will attend and present their work at the 25th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems",
+       "slides"      : "",
+       "keywords"    : ""
+      },
+        {"title"     : "Center for Geospatial Information Science Inauguration",
+       "day"         : "1",
+       "month"       : "11",
+       "author"      : "GIS events",
+       "authorpage"  : "https://geospatial.umd.edu/featuredcontent/707",
+       "abstract"    : "The Center for Geospatial Information Science celebrated its inauguration with two invited talks and an Open House and reception on Wednesday, November 1st. Professors Hanan Samet (Computer Science, University of Maryland) and Harvey Miller (Geography, Ohio State University) gave the invited talks as part of this event. The Open House included demonstrations and poster talks on a wide range of research topics involving members of the CGIS.",
+       "slides"      : "",
+       "keywords"    : ""
+      },
       {"title"     : "Anlyzing multivariate data based on a discrete gradient field",
      "day"         : "11",
      "month"       : "10",
